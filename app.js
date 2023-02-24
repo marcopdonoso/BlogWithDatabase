@@ -67,8 +67,8 @@ app.post("/compose", function(req, res){
   });
 });
 
-app.get("/posts/:postName", function(req, res){
-  Post.findById(req.params.postName, function(err, doc){
+app.get("/posts/:postId", function(req, res){
+  Post.findById(req.params.postId, function(err, doc){
     if(!err) {
       res.render("post", {
         title: doc.title,
